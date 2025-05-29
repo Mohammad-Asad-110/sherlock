@@ -1,32 +1,16 @@
-import React from "react";
-import {SafeAreaView, ScrollView} from "react-native";
-import PopularCitiesSection from "@/components/sections/PopularCitiesSection";
-import BenefitsSection from "@/components/sections/BenefitsSection";
-import FaqSection from "@/components/sections/FaqSection";
-import CheckupPlanSection from "@/components/sections/CheckupPlanSection";
-import GlanceSection from "@/components/sections/GlanceSection";
-import ContactUsSection from "@/components/sections/ContactUsSection";
-import TopBarSection from "@/components/sections/TopBarSection";
-import HeroSection from "@/components/sections/HeroSection";
+import { useEffect } from 'react';
+import { useRouter, useSegments } from 'expo-router';
 
-export default function Index() {
-  return (
-      <SafeAreaView className="flex-1 bg-white">
-          <ScrollView
-              showsVerticalScrollIndicator={false}
-              contentContainerStyle={{ paddingBottom: 40 }}
-          >
-              <TopBarSection/>
-              <HeroSection/>
-              <GlanceSection/>
-              <PopularCitiesSection/>
-              <BenefitsSection/>
-              <CheckupPlanSection/>
-              <FaqSection/>
-              <ContactUsSection/>
+// Simulated auth state — replace with real logic later
+const isLoggedIn = false;
 
-          </ScrollView>
+export default function EntryPoint() {
+    const router = useRouter();
+    const segments = useSegments();
 
-      </SafeAreaView>
-  );
+    useEffect(() => {
+        router.replace('/login');
+    }, [segments]);
+
+    return null;
 }
