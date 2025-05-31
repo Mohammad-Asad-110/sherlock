@@ -7,4 +7,6 @@ export const icons = {
     whatsapp: require('../assets/icons/whatsapp.png'),
     tick: require('../assets/icons/tick.png'),
     accordion: require('../assets/icons/accordion.png'),
+    calendar: require('../assets/icons/calendar.png'),
+    back: require('../assets/icons/back.png')
 };
